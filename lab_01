@@ -1,0 +1,177 @@
+#This is a comment
+print('--------------------COMMENTS--------------------')
+print("Hello, World!")
+
+# VARIABLES
+print('--------------------VARIABLES--------------------')
+x = 5
+x = 'hello'
+print(x)
+print(type(x))
+a, b, c = 10, 20, 30
+print(a,b,c)
+
+# NUMBERS
+print('--------------------NUMBERS--------------------')
+x = 10
+y = 20.5
+z = 30j
+print(type(x))
+print(type(y))
+print(type(z))
+
+# CASTING
+print('--------------------CASTING--------------------')
+x = int(10)
+y = float(20)
+z = complex(30)
+print(x)
+print(y)
+print(z)
+
+# STRINGS
+print('--------------------STRINGS--------------------')
+print("Ai lab")
+print('Ai lab')
+print('Ai lab "hello"')
+b = 'hello how are you '
+print(b[0:10])
+print(b.upper())
+a = 'Welcom'
+b = 'e'
+print(a+b)
+
+# BOOLEANS
+print('--------------------BOOLEANS--------------------')
+a = 10
+b = 5
+if a > b:
+    print("a is greater than b")
+else:
+    print("a is not greater than b")
+
+# OPERATORS
+print('--------------------OPERATORS--------------------')
+x = 10
+y = 3
+print("Addition:", x + y)
+print("Subtraction:", x - y)
+print("Multiplication:", x * y)
+print("Division:", x / y)
+print("Modulus:", x % y)
+print("Exponentiation:", x ** y)
+print("Floor division:", x // y)
+print(x == y)
+print(x != y)
+print(x > y)
+print(x < y)
+print(x >= y)
+print(x <= y )
+print(x > y and x < y)
+print(x > y or x < y )
+print(not(x > y and x < y))
+print(x is y)
+print(x is not y)
+
+# LIST
+print('--------------------LIST--------------------')
+list1 = ["school", "college", "university"]
+list2 = [1, 5, 7, 9, 3]
+list3 = [True, False, False]
+list4 = [1, 'hello', 3.5, False]
+type(list4)
+print('Last itme of the list ',+list4[-1] )
+print(list4[0:len(list4)])
+list2.append(10)
+for i in list2:
+  print(i)
+list2.sort()
+
+# TUPLES
+print('--------------------TUPLES--------------------')
+myTuple = (1, 2, 3, 4, 5)
+print('if i want to change value of tuple it will give me error ')
+#myTuple[0] = 2
+
+# SETS
+print('--------------------SETS--------------------')
+mySet = {1, 2, 3, 4, 5}
+mySet.add(6)
+for i in mySet:
+    print(i)
+mySet.remove(1)
+print('After removal')
+for i in mySet:
+  print(i)
+
+# DICTIONARY
+print('--------------------DICTIONARY--------------------')
+myDic = {'age':22, 'name':'Muaaz', 'CGPA':3.6}
+for key, value in myDic.items():
+    print(f"{key}: {value}")
+
+# CLASSES
+print('--------------------CLASSES--------------------')
+class Stack:
+    def __init__(self):
+        self.stack = []  # Initialize an empty list to represent the stack
+
+    def push(self, item):
+        """Add an item to the top of the stack"""
+        self.stack.append(item)
+        print(f"{item} pushed to stack")
+
+    def pop(self):
+        """Remove and return the top item from the stack"""
+        if not self.is_empty():
+            popped_item = self.stack.pop()
+            print(f"{popped_item} popped from stack")
+            return popped_item
+        else:
+            print("Stack is empty. Cannot pop.")
+            return None
+
+    def peek(self):
+        """Return the top item without removing it"""
+        if not self.is_empty():
+            return self.stack[-1]
+        else:
+            print("Stack is empty.")
+            return None
+
+    def is_empty(self):
+        """Check if the stack is empty"""
+        return len(self.stack) == 0
+
+    def size(self):
+        """Return the size of the stack"""
+        return len(self.stack)
+
+def main():
+    # Create an instance of the Stack class
+    stack = Stack()
+
+    # Push items to the stack
+    stack.push(10)
+    stack.push(20)
+    stack.push(30)
+
+    # Peek at the top item of the stack
+    print(f"Top item is: {stack.peek()}")
+
+    # Pop an item from the stack
+    stack.pop()
+
+    # Check if the stack is empty
+    if not stack.is_empty():
+        print(f"Stack size: {stack.size()}")
+    else:
+        print("Stack is empty!")
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
